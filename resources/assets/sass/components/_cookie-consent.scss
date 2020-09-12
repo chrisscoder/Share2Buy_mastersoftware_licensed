@@ -1,0 +1,93 @@
+.cookie-concent-wrapper {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 8888;
+    bottom: 0;
+    color: $brand-primary;
+    // background: $gray-darker;
+    background: $white;
+    width: 100%;
+}
+
+.cookie-concent.ng-enter, .cookie-concent.ng-leave {
+  transition:all .3s;
+}
+
+.cookie-concent.ng-enter,
+.cookie-concent.ng-leave.ng-leave-active {
+  transform: translateY(100%);
+  opacity:0;
+}
+
+.cookie-concent.ng-leave,
+.cookie-concent.ng-enter.ng-enter-active {
+  transform: translateY(0);
+  opacity:1;
+}
+.cookie-concent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space-xs;
+    margin: 0 auto;
+    width: 100%;
+    @media(min-width: $screen-sm-min) {
+        width: $container-sm;
+    }
+    @media(min-width: $screen-md-min) {
+        width: $container-md;
+    }
+    @media(min-width: $screen-lg-min) {
+        width: $container-lg;
+    }
+    @media(min-width: $screen-xl-min) {
+        width: $container-xl;
+    }
+
+    .cookie-disclaimer {
+        p {
+            margin: 0;
+            color: $brand-primary;
+        }
+
+        a {
+            color: $brand-primary;
+            border-bottom: 1px dotted $brand-cta;
+        }
+
+        a:hover {
+            color: $brand-cta;
+        }
+    }
+
+    button.btn-close {
+        position: relative;
+        display: inline-block;
+        background: 0;
+        border: none;
+        width: 22px;
+        height: 22px;
+    }
+
+    .btn-close::after,
+    .btn-close::before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: $brand-cta;
+        transform-origin: center;
+        top: 50%;
+        left: 0;
+    }
+
+    .btn-close::before {
+        transform: rotate(45deg);
+    }
+
+    .btn-close::after {
+        transform: rotate(-45deg);
+    }
+}

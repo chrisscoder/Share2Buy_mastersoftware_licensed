@@ -1,0 +1,118 @@
+.btn,
+.btn:active,
+.btn:focus,
+.btn:hover,
+.btn:visited {
+    text-decoration: none;
+}
+// .btn:active {
+//     box-shadow: none;
+// }
+
+.btn {
+    font-family: $font-family-serif-strong;
+    letter-spacing: 1px;
+    line-height: normal;
+    font-weight: 600;
+    // border-width: 2px;
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: all 0.2s;
+    border: none;
+    padding: 16px 24px 12px;
+    // border-radius: 2px;
+    @media(min-width: $screen-sm-min) {
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+    @media(min-width: $screen-md-min) {
+        letter-spacing: 2px;
+    }
+
+    span.icon:before {
+        font-size: 14px;
+        margin-right: 5px;
+        @media(min-width: $screen-sm-min) {
+            font-size: 16px;
+        }
+    }
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.12);
+    transition: all 0.3s;
+}
+
+.btn:focus,
+.btn:hover,
+.btn:visited {
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.12), 0 8px 8px 0 rgba(0,0,0,0.24);
+}
+
+.btn.btn-small {
+    font-family: $font-family-serif-black;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1;
+    @media(min-width: $screen-sm-min) {
+        letter-spacing: 2px;
+        font-size: 12px;
+        line-height: 1.3;
+    }
+    @media(min-width: $screen-md-min) {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+}
+
+.btn-group-lg > .btn,
+.btn-lg {
+    padding: 16px 8px 12px;
+    @media(min-width: $screen-md-min) {
+        padding: 24px 24px 20px;
+    }
+
+    span.icon {
+        line-height: 1;
+        vertical-align: middle;
+    }
+}
+
+.btn.btn-opposite {
+    color: $brand-primary;
+    background: $main-primary;
+}
+
+.btn.btn-cta {
+    color: $brand-cta-dark;
+    background: $brand-cta;
+    border-color: $brand-cta;
+}
+
+.btn-primary:focus,
+.btn-primary:hover,
+.inputfile:focus + .btn-primary {
+    // color: $white;
+    color: $brand-cta;
+    background: $brand-primary;
+    border-color: $brand-primary;
+}
+
+.btn-default:focus,
+.btn-default:hover,
+.inputfile:focus + .btn-default {
+    // color: $brand-primary;
+    color: $brand-cta;
+    background: $white;
+    border-color: $white;
+}
+// inputfile btn
+
+.inputfile + label * {
+    pointer-events: none;
+    vertical-align: middle;
+}
+svg.icon.icon-upload {
+    font-size: 20px;
+    vertical-align: middle;
+}

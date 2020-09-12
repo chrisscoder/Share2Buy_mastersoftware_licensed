@@ -1,0 +1,117 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  background: $white;
+}
+
+body {
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  // Better animation performance
+  backface-visibility: hidden;
+}
+
+main {
+  background-color: $light-blue;
+}
+
+figure,
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:focus {
+  outline: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.fullscreen {
+  height: 100vh;
+  @media(min-width: $screen-md-min) {
+    min-height: 700px; //desktop and up
+  }
+}
+
+.sr-only {
+  position: absolute !important;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.box {
+  @media(min-width: $screen-sm-min) {
+    padding: 24px;
+  }
+}
+
+.icon-row,
+.product .icon-row {
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  h3:after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 18px;
+    left: 50%;
+    border-bottom: 1px solid #9c9c9c;
+    width: 20%;
+    transform: translate(-50%,0);
+  }
+}
+
+.icon-row .icon {
+  font-size: 35px;
+  @media(min-width: $screen-sm-min) {
+    font-size: 40px;
+  }
+}
+
+.signup-cta {
+  p {
+    letter-spacing: 1px;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.center-hv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.green {
+  color: $brand-cta;
+}

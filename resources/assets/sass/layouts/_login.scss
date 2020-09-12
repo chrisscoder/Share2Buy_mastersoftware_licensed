@@ -1,0 +1,92 @@
+.auth {
+    .panel {
+        background-color: $white;
+        border: none;
+        border-radius: 4px;
+        box-shadow: none;
+        margin-bottom: 0;
+
+        .panel-heading {
+            padding: 30px 30px 0;
+        }
+
+        h3 {
+            color: $brand-primary;
+            margin: 0;
+        }
+    }
+
+    .link {
+        margin-bottom: 0;
+    }
+
+    .panel-body {
+        padding: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    .form-group:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 55px;
+        padding: 14px 15px;
+        font-size: 14px;
+        @media(min-width: $screen-sm-min) {
+            font-size: 14px;
+        }
+        @media(min-width: $screen-md-min) {
+            font-size: 16px;
+        }
+        @media(min-width: $screen-lg-min) {
+            font-size: 18px;
+        }
+        line-height: 1.4285714286;
+        color: $brand-primary;
+        background: $light-blue;
+        border: 2px solid $light-blue;
+        border-radius: 2px;
+        box-shadow: none;
+        // transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    }
+
+    .checkbox {
+        color: $brand-primary;
+    }
+
+    .help-block {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        color: $brand-primary;
+    }
+
+    a.help-block {
+        display: inline;
+        border-bottom: 1px dotted $brand-primary;
+    }
+
+    a.join {
+        color: $brand-primary;
+        border-bottom: 1px dotted $brand-cta;
+    }
+
+    a:hover.join {
+        color: $brand-cta;
+    }
+
+    .has-error .form-control {
+        border-color: $brand-danger;
+        box-shadow: none;
+    }
+
+    .has-error .help-block {
+        color: $brand-danger;
+    }
+}

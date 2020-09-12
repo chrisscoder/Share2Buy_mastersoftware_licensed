@@ -1,0 +1,20 @@
+<div class="space-bottom">
+  <label>{{label}}</label>
+  <input type="file" name="{{inputName}}" id="{{inputName}}" class="inputfile" accept=".jpg,.jpeg,.png" data-ng-required="required">
+  <div class="image-upload-preview ratio ratio-{{aspectRatio}}" data-ng-class="{border: !imagePrev && !initImage}">
+    <label for="{{inputName}}" class="ratio-content">
+      <span data-ng-if="!imagePrev && !initImage">
+        <svg class="icon icon-upload"><use xlink:href="#icon-upload"></use></svg>
+        <span class="upload-text">{{uploadText}}</span>
+        <span class="help-text">{{helpText}}</span>
+      </span>
+      <span data-ng-if="imagePrev || initImage" class="hover-instruct">
+        <svg class="icon icon-upload"><use xlink:href="#icon-upload"></use></svg>
+        <span class="upload-text">Change image</span>
+        <span class="help-text">{{helpText}}</span>
+      </span>
+      <span data-ng-if="imagePrev" class="img-preview" style="background: url({{imagePrev}}) no-repeat center / cover;"></span>
+      <span data-ng-if="!imagePrev && initImage" class="img-preview" style="background: url({{initImage}}) no-repeat center / cover;"></span>
+    </label>
+  </div>
+</div>

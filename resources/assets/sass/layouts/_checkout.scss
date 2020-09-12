@@ -1,0 +1,240 @@
+.admin,
+.checkout {
+  h2.small {
+    font-family: "BrandonTextWeb-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    @media(min-width: $screen-sm-min) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    @media(min-width: $screen-md-min) {
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 15px;
+    @media(min-width: $screen-sm-min) {
+      margin-bottom: 20px;
+    }
+    @media(min-width: $screen-md-min) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .form-group.img-form-group {
+    margin-bottom: 0;
+  }
+
+  input.form-control {
+    border: none;
+    box-shadow: none;
+    background: $light-blue;
+    border-radius: 2px;
+    padding: 14px 65px 14px 20px;
+  }
+
+  input::selection {
+    background: $brand-primary;
+    color: $white;
+  }
+
+  .form-control {
+    box-shadow: none;
+  }
+
+  .form-control:focus,
+  .select-option:focus {
+    // box-shadow: none;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.12);
+  }
+
+  .form-feedback {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0,-50%);
+    font-size: 30px;
+    z-index: 2;
+    display: block;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .form-feedback-sm {
+    font-size: 12px;
+    line-height: 1.3;
+    @media(min-width: $screen-sm-min) {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    @media(min-width: $screen-md-min) {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+  }
+
+  .help-block {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .help-block.text-warning {}
+
+  span.help-block.text-warning {
+    color: $brand-danger;
+  }
+
+  .has-error .form-control {
+    border: none;
+    background: rgba($brand-danger,0.16);
+  }
+
+  .has-error .form-control:focus {
+    border: none;
+    box-shadow: none;
+  }
+
+  .has-error .help-block.text-warning {
+    color: inherit;
+  }
+
+  textarea.form-control {
+    border: none;
+    background: $light-blue;
+    box-shadow: none;
+    border-radius: 4px;
+  }
+
+  label.approve {
+    color: $brand-primary;
+    margin-left: 5px;
+    font-weight: normal;
+  }
+
+  .select-option {
+    display: flex;
+    align-items: center;
+    background-color: $light-blue;
+    color: $brand-primary;
+    margin-bottom: 0;
+    font-size: 22px;
+    transition: background 0.2s;
+    position: relative;
+
+    .select-option-control {
+      color: $brand-primary;
+      border-color: $white;
+      font-size: 14px;
+      display: block;
+      width: 100%;
+      height: inherit;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      background-image: none;
+      -webkit-appearance: none;
+      padding: 0.8em;
+      z-index: 1;
+    }
+
+    select.select-option-control:focus {
+      outline: none;
+    }
+
+    .icon.icon-ios-arrow-down {
+      position: absolute;
+      top: 50%;
+      right: 0.3em;
+      transform: translate(0,-50%);
+      z-index: 0;
+    }
+
+    .icon.icon-ios-checkmark-empty {
+      font-size: 30px;
+      pointer-events: none;
+    }
+  }
+}
+
+.checkout {
+  .help-block.text-danger {
+    position: absolute;
+    bottom: -45%;
+    margin-bottom: 0;
+  }
+
+  button.stripe-button-el {
+    background-image: none !important;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    float: right;
+  }
+
+  .stripe-button-el span {
+    background: $brand-primary;
+    border-radius: 0;
+    text-transform: uppercase;
+    text-shadow: none;
+    @extend .btn;
+    padding: 15px 20px;
+    @media(min-width: $screen-md-min) {
+      padding: 20px 30px;
+    }
+    height: 55px;
+    border: 2px solid $white-darker;
+  }
+
+  .payments-container {
+    display: flex;
+    justify-content: center;
+    margin-top: $space-xs;
+  }
+
+  .payments {
+    list-style: none;
+    margin-bottom: 0;
+
+    .icon.icon-lets-encrypt {
+      font-size: 30px;
+    }
+
+    .icon.icon-powered_by_stripe {
+      font-size: 20px;
+    }
+  }
+
+  .payments li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .card-payment .form-group {
+    margin-bottom: $space-xs;
+  }
+}
+
+.icon-row.social-icons {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+  }
+
+  a {
+    color: $brand-cta;
+  }
+
+  a:hover {
+    color: $brand-cta-dark;
+  }
+}

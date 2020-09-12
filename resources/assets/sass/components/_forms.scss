@@ -1,0 +1,115 @@
+.lable-icon {
+  font-size: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.select-option-group.has-error .select-option {
+  background: rgba($brand-danger,0.16);
+}
+@media(max-width: $screen-xs-max) {
+  .select-option.select-space {
+    margin-bottom: 10px;
+  }
+}
+
+.select-option {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  color: $brand-primary;
+  height: 59px;
+  margin-bottom: 0;
+  font-size: 22px;
+  transition: background 0.2s;
+  position: relative;
+
+  .select-option-control {
+    color: $brand-primary;
+    border-color: $white;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    height: inherit;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    padding: 0.8em;
+    z-index: 1;
+  }
+
+  select.select-option-control:focus {
+    outline: none;
+  }
+
+  .icon.icon-ios-arrow-down {
+    position: absolute;
+    top: 50%;
+    right: 0.3em;
+    transform: translate(0,-50%);
+    z-index: 0;
+  }
+}
+
+.form-group select.form-control {
+  box-shadow: none;
+}
+
+select:not([multiple]) {
+  box-shadow: none;
+  appearance: none;
+  border-radius: 0;
+  background: url("/images/icons/ios-arrow-down.svg") calc(100% - .8em) 50% no-repeat;
+  background-size: 8%;
+  padding: 0.8em 1.5em 0.8em 0.8em;
+}
+
+.signup-form .form-control {
+  border: none;
+  box-shadow: none;
+  font-size: 14px;
+  height: 44px;
+  border-radius: 2px;
+  background: $light-blue;
+  @media(min-width: $screen-sm-min) {
+    font-size: 14px;
+    height: 49px;
+  }
+  @media(min-width: $screen-md-min) {
+    font-size: 16px;
+    height: 59px;
+  }
+}
+// .signup-form.form-group {
+//     background: $light-blue;
+//
+// }
+// Remove arrows from input[type=number]
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.checkout .stripe-button-el .input-group-btn:last-child > span,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+  margin-right: -1px;
+}
+
+.form-inline .btn {
+  width: 100%;
+  @media(min-width: $screen-sm-min) {
+    width: initial;
+  }
+}
+
+.inner-form-group {
+  position: relative;
+}

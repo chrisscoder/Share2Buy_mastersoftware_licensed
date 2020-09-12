@@ -1,0 +1,49 @@
+@media (max-width: $screen-xs-max) {
+    .collapse-ratio.ratio-1-1:before {
+        display: block;
+        content: "";
+        width: 0;
+        padding-top: 0;
+    }
+    .collapse-ratio .ratio-content {
+        position: relative;
+        background-color: inherit;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+}
+.ratio-container {
+    position: relative;
+}
+.card .ratio,
+.ratio {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+.ratio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+.ratio-1-1:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%;
+}
+.ratio-16-9:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%; //---- 9/16*100
+}

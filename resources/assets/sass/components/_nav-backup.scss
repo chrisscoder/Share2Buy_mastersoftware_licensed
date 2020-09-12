@@ -1,0 +1,195 @@
+$header-background: $white;
+$nav-color: $gray;
+$nav-height-initial-xs: 48px;
+$nav-height-initial-sm: 69px;
+$nav-height-initial-md: 80px;
+$nav-height-xs: 50px;
+$nav-height-sm: 70px;
+$nav-height-md: 70px;
+$nav-brand-width-xs: 103px;
+$nav-brand-height-xs: 10.16px;
+$nav-brand-width-sm: 154px;
+$nav-brand-height-sm: 15.19px;
+$nav-brand-width-md: 204.4px;
+$nav-brand-height-md: 20.16px; // If not transparent nav background
+
+.header-nav {
+    padding-bottom: $nav-height-initial-xs;
+    @media (min-width: $screen-sm-min) {
+        padding-bottom: $nav-height-initial-sm;
+    }
+    @media (min-width: $screen-md-min) {
+        padding-bottom: $nav-height-initial-md;
+    }
+}
+
+.banner {
+    font-family: $font-family-serif;
+    // font-weight: 600;
+    // width: 100%;
+    background: $header-background;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    // overflow:auto;
+    z-index: 9999;
+    transition: all 0.3s;
+
+    .container {
+        position: relative;
+    }
+
+    .nav-header {
+        transition: all 0.3s;
+        height: $nav-height-initial-xs;
+        @media (min-width: $screen-sm-min) {
+            height: $nav-height-initial-sm;
+        }
+        @media (min-width: $screen-md-min) {
+            height: $nav-height-initial-md;
+        }
+        // > div {
+        //     width: 100%;
+        // }
+    }
+}
+
+.nav-brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s;
+
+    backface-visibility: hidden;
+    perspective: 1000;
+    .icon-modsvarlogo {
+      // width: $nav-brand-width-xs;
+      // height: $nav-brand-height-xs;
+      font-size: 8px;
+      @media (min-width: $screen-sm-min) {
+          width: $nav-brand-width-sm;
+          height: $nav-brand-height-sm;
+      }
+      @media (min-width: $screen-md-min) {
+          width: $nav-brand-width-md;
+          height: $nav-brand-height-md;
+      }
+    }
+    a {
+        color: $brand-primary;
+        transition: all 0.2s ease-in-out;
+    }
+
+    // a.active {
+    //     color: $gray-base;
+    // }
+
+    a:hover {
+        color: $gray-base;
+    }
+}
+
+.nav-primary {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+
+    li {
+        // @media (min-width: $screen-sm-min) {
+        //     margin-left: 20px;
+        // }
+        // @media (min-width: $screen-md-min) {
+        //     margin-left: 20px;
+        // }
+        @media (min-width: $screen-lg-min) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.nav-secondary {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0,-50%);
+    li {
+        display: inline-block;
+        margin: 0;
+        line-height: 1;
+        // @media (min-width: $screen-sm-min) {
+        //     margin-left: 20px;
+        // }
+        // @media (min-width: $screen-md-min) {
+        //     margin-left: 20px;
+        // }
+        @media (min-width: $screen-lg-min) {
+            margin-left: 20px;
+        }
+    }
+}
+
+.nav-primary,
+.nav-secondary {
+    backface-visibility: hidden;
+    perspective: 1000;
+    margin: 0;
+
+    li {
+        display: inline-block;
+        margin: 0;
+        line-height: 1;
+    }
+
+    li a {
+        display: block;
+        color: $nav-color;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 15px;
+        // @media (min-width: $screen-sm-min) {
+        //     position: relative;
+        //     transform: translateY(50%);
+        //     padding: 9px 15px;
+        //     letter-spacing: 2px;
+        //     font-size: 12px;
+        // }
+        @media (min-width: $screen-md-min) {
+            padding: 29px 15px;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+        // &:last-of-type {
+        //     margin-right: -25px;
+        // }
+    }
+
+    // li a.active {
+    //     color: $gray-base;
+    // }
+
+    li a:hover {
+        color: $gray-base;
+    }
+}
+// .nav-primary {
+//     display: none;
+//     @media (min-width: $screen-sm-min) {
+//         display: block;
+//     }
+// }
+.nav-primary a.active::after, .nav-secondary a.active::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: $brand-cta;
+    /* margin-top: 5px; */
+    position: relative;
+    transform: translateY(5px);
+}

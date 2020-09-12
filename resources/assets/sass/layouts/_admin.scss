@@ -1,0 +1,359 @@
+.admin a.dotted {
+  color: $gray-darker;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-bottom: 1px dotted $brand-cta;
+}
+
+.admin a.dotted:hover {
+  color: $brand-cta;
+}
+
+.admin .badge.sale {
+  background: $brand-cta;
+}
+
+.admin .badge {
+  transition: 0.3s all;
+  // background: $brand-cta;
+}
+
+.admin .badge.text-danger {
+  background: $brand-danger;
+}
+
+.admin .badge.text-success {
+  background: $brand-cta;
+}
+
+.admin a.edit {
+  color: $gray-darker;
+
+  &:hover {
+    color: $brand-cta;
+  }
+}
+
+.admin a.delete {
+  color: $gray-darker;
+
+  &:hover {
+    color: $brand-danger;
+  }
+}
+// ---- Common styles
+
+.admin .alert-success a {
+  color: $state-success-text;
+  text-decoration: underline;
+}
+
+.admin .alert-info a {
+  color: $state-info-text;
+  text-decoration: underline;
+}
+
+.admin .alert-warning a {
+  color: $state-warning-text;
+  text-decoration: underline;
+}
+
+.admin .alert-danger a {
+  color: $state-danger-text;
+  text-decoration: underline;
+}
+
+.admin .heading {
+  display: inline-block;
+  color: $gray-light;
+  font-family: $font-family-serif;
+  @extend p;
+}
+
+.sidebar-no-padding {
+  padding-left: 0;
+}
+
+.admin .admin-sidebar-nav {
+  @extend .col-sm-3;
+  position: fixed;
+  z-index: 9000;
+  height: 100vh;
+
+  li {
+    border-bottom: 1px solid $gray-light;
+  }
+}
+
+.admin .badge {
+  font-size: 12px;
+}
+
+.admin .panel-heading {
+  padding: $space-xs $space-xs 0;
+  @media(min-width: $screen-sm-min) {
+    padding: $space $space 0;
+  }
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  margin: 0;
+  @extend h3;
+
+  .manchet {
+    margin-top: 0;
+  }
+}
+
+.admin .panel {
+  border: none;
+  box-shadow: none;
+  margin-bottom: $space;
+}
+
+.admin .panel-body {
+  padding: $space-xs;
+  @media(min-width: $screen-sm-min) {
+    padding: $space;
+  }
+}
+// .admin .form-group {
+//     margin-bottom: 30px;
+// }
+//
+// .admin .form-group:last-of-type {
+//     margin-bottom: 0;
+// }
+//
+// .admin .form-control {
+//     display: block;
+//     width: 100%;
+//     height: 55px;
+//     line-height: 1.4285714286;
+//     box-shadow: none;
+//     padding: 12px;
+// }
+
+.admin ul {
+  list-style-type: none;
+}
+//
+// .admin select {
+//     box-shadow: none;
+//     appearance: none;
+//     border-radius: 0;
+//     background: url("/images/icons/ios-arrow-down.svg") calc(100% - .8em) 50% no-repeat $light-blue;
+//     background-size: 3%;
+//     padding: 0.8em 1.5em 0.8em 0.8em;
+//     border: none;
+// }
+
+.admin textarea.form-control {
+  height: initial;
+}
+
+.admin .btn-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: auto;
+  max-width: 226px;
+  @media (min-width: $screen-sm-min) {
+    max-width: 155px;
+  }
+  @media (min-width: $screen-md-min) {
+    max-width: 226px;
+  }
+  @media (min-width: $screen-lg-min) {
+    max-width: 295px;
+  }
+}
+
+.btn-overflow-full {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: auto;
+  max-width: 274px;
+  @media (min-width: $screen-sm-min) {
+    max-width: 200px;
+  }
+  @media (min-width: $screen-md-min) {
+    max-width: 274px;
+  }
+  @media (min-width: $screen-lg-min) {
+    max-width: 341px;
+  }
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.admin a {
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.admin img.img-responsive {
+  width: auto;
+}
+
+.admin img.img-full {
+  width: 100%;
+  height: auto;
+}
+
+.admin .table > tbody > tr > td {
+  vertical-align: middle;
+}
+/* Grow panel to fill columns height */
+.flex-row .panel {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.admin-nav {
+  background: $white;
+  padding: $space-base 0;
+  border-bottom: 1px solid $light-blue;
+  position: fixed;
+  width: 100%;
+  z-index: 9998;
+
+  a.admin-nav-button {
+
+    display: inline-block;
+    color: $nav-color;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: $space-base $space-xs;
+    @media (min-width: $screen-md-min) {
+
+        letter-spacing: 2px;
+        font-size: 13px;
+    }
+
+    &:hover {
+        color: $gray-base;
+    }
+    &::after, &.active::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: transparent;
+      position: relative;
+      transform: translateY(1px);
+      @media (min-width: $screen-sm-min) {
+          transform: translateY(2px);
+      }
+    }
+    &.active::after {
+        background: $brand-cta;
+    }
+  }
+
+}
+
+.image-upload-preview {
+    font-family: $font-family-serif-strong;
+    letter-spacing: 1px;
+    line-height: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-align: center;
+    color: darken($light-blue, 20%);
+    @media(min-width: $screen-sm-min) {
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+    @media(min-width: $screen-md-min) {
+        letter-spacing: 2px;
+    }
+    transition: all 0.3s;
+
+    &:focus,
+    &:hover,
+    &:visited {
+        color: darken($light-blue, 25%);
+    }
+
+    &.border {
+        border: 2px dashed $light-blue;
+    }
+
+    &:focus.border,
+    &:hover.border,
+    &:visited.border {
+        border-color: darken($light-blue, 5%);
+    }
+
+    label.ratio-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    span.img-preview {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    svg.icon.icon-upload {
+        font-size: 40;
+        margin: 0 auto;
+        display: block;
+        @media(min-width: $screen-sm-min) {
+            font-size: 70px;
+        }
+    }
+
+    .help-text {
+        display: block;
+        font-size: 10px;
+        text-transform: initial;
+        text-align: center;
+        font-weight: normal;
+        letter-spacing: 0;
+        margin: 0 auto;
+    }
+
+    .upload-text {
+        display: block;
+    }
+
+    span.hover-instruct {
+        position: absolute;
+        visibility: hidden;
+        transition: 0.3s background;
+    }
+
+    &:hover .hover-instruct {
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        background: rgba(55, 55, 56, 0.75);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

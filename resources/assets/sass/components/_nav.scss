@@ -1,0 +1,189 @@
+$header-background: $white;
+$nav-color: $gray;
+$nav-height-xs: 50px;
+$nav-height-sm: 70px;
+$nav-height-md: 80px;
+$nav-brand-width-xs: 103px;
+$nav-brand-height-xs: 10.16px;
+$nav-brand-width-sm: 154px;
+$nav-brand-height-sm: 15.19px;
+$nav-brand-width-md: 204.4px;
+$nav-brand-height-md: 20.16px; // If not transparent nav background
+
+main {
+  padding-top: $nav-height-xs;
+  @media (min-width: $screen-sm-min) {
+    padding-top: $nav-height-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    padding-top: $nav-height-md;
+  }
+}
+
+main.has-banner {
+  padding-top: $nav-height-xs + 54px;
+  @media (min-width: $screen-sm-min) {
+    padding-top: $nav-height-sm + 54px;
+  }
+  @media (min-width: $screen-md-min) {
+    padding-top: $nav-height-md + 54px;
+  }
+}
+
+.header-nav {
+  font-family: $font-family-serif;
+  background: $header-background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 9999;
+  transition: all 0.3s;
+  border-bottom: 1px solid $light-blue;
+}
+
+.nav-brand {
+  margin-left: 0;
+  @media (min-width: $screen-sm-min) {
+    margin-left: -15px;
+  }
+
+  .icon-modsvar-triangle {
+    font-size: 15px;
+  }
+
+  .icon-modsvarlogo {
+    // width: $nav-brand-width-xs;
+    // height: $nav-brand-height-xs;
+    font-size: 8px;
+    @media (min-width: $screen-sm-min) {
+      width: $nav-brand-width-sm;
+      height: $nav-brand-height-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $nav-brand-width-md;
+      height: $nav-brand-height-md;
+    }
+  }
+
+  a {
+    color: $brand-primary;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover {
+    color: $gray-base;
+  }
+}
+
+.nav-primary {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: $nav-height-xs;
+  @media (min-width: $screen-sm-min) {
+    height: $nav-height-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    height: $nav-height-md;
+  }
+
+  .nav-item:last-of-type {
+    margin-right: 0;
+    @media (min-width: $screen-sm-min) {
+      margin-right: -15px;
+    }
+  }
+
+  .nav-brand {
+    // http://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties/33856609#33856609
+    margin-right: auto;
+  }
+
+  a {
+    display: block;
+    color: $nav-color;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 15px 5px;
+    @media (min-width: $screen-md-min) {
+      padding: 29px 15px;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+  }
+
+  a:hover {
+    color: $gray-base;
+  }
+}
+
+.nav-primary a.active::after,
+.nav-primary a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  transform: translateY(1px);
+  @media (min-width: $screen-sm-min) {
+    transform: translateY(5px);
+  }
+}
+
+.nav-primary a.active::after {
+  background: $brand-cta;
+}
+
+.banner {
+  background: $white;
+  border-top: 1px solid $light-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9998;
+  height: 54px;
+
+  ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  li {
+    display: block;
+    margin: 0;
+    padding: 0 $space-xs;
+    width: 50%;
+    @media (min-width: $screen-sm-min) {
+      padding: 0 $space;
+      width: auto;
+    }
+  }
+
+  li:first-child::before {
+    content: none;
+  }
+  @media (min-width: $screen-sm-min) {
+    li::before {
+      background-color: #ccd2d6;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 6px;
+      left: -27px;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 6px;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+//
+// Spacing
+// --------------------------------------------------
+
+.space-xs {
+    padding-top: $space-base;
+    padding-bottom: $space-base;
+    @media (min-width: $screen-md-min) {
+        padding-top: $space-xs;
+        padding-bottom: $space-xs;
+    }
+}
+
+.space-xs-top {
+    margin-top: $space-xs/2;
+    @media (min-width: $screen-md-min) {
+        margin-top: $space-xs;
+    }
+}
+
+.space-btn-bottom {
+    margin-top: $space-xs;
+    margin-bottom: $space;
+}
+
+.space {
+    padding-top: $space-xs;
+    padding-bottom: $space-xs;
+    @media (min-width: $screen-md-min) {
+        padding-top: $space;
+        padding-bottom: $space;
+    }
+}
+.space-sm-top-hidden {
+  padding-top: $space;
+  @media (min-width: $screen-md-min) {
+      padding-top: 0;
+  }
+}
+
+
+
+.space-top {
+    margin-top: $space-xs;
+    @media (min-width: $screen-md-min) {
+        margin-top: $space;
+    }
+}
+
+.space-bottom {
+    margin-bottom: $space-xs;
+    @media (min-width: $screen-md-min) {
+        margin-bottom: $space;
+    }
+}
+
+.space-left {
+    margin-left: $space-xs;
+    @media (min-width: $screen-md-min) {
+        margin-left: $space;
+    }
+}
+.space-xs-right {
+    margin-right: $space-base;
+    @media (min-width: $screen-md-min) {
+        margin-right: $space-xs;
+    }
+}
+
+.space-grid {
+    padding-top: $space-xs;
+    padding-bottom: 0;
+    @media (min-width: $screen-sm-min) {
+        padding-top: $space-m;
+        padding-bottom: $space;
+    }
+    @media (min-width: $screen-md-min) {
+        padding-top: 80px;
+        padding-bottom: $space;
+    }
+}
+
+.space-m-top {
+    margin-top: $space;
+    @media (min-width: $screen-sm-min) {
+        margin-top: $space;
+    }
+    @media (min-width: $screen-md-min) {
+        margin-top: $space-m;
+    }
+}
+
+.space-m-bottom {
+    margin-bottom: $space-xs;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: $space;
+    }
+    @media (min-width: $screen-md-min) {
+        margin-bottom: $space-m;
+    }
+}
+.padding-bottom {
+  padding-bottom: $space-xs;
+  @media (min-width: $screen-md-min) {
+      padding-bottom: $space;
+  }
+}
+
+
+.space-m {
+    // padding-top: $space-xs;
+    // padding-bottom: $space-xs;
+    padding-top: $space;
+    padding-bottom: $space;
+    @media (min-width: $screen-sm-min) {
+        padding-top: $space;
+        padding-bottom: $space;
+    }
+    @media (min-width: $screen-md-min) {
+        padding-top: $space-m;
+        padding-bottom: $space-m;
+    }
+}
+
+.space-m-half {
+    padding: $space-xs 0;
+    @media (min-width: $screen-md-min) {
+        padding: $space-m/2 0;
+    }
+}
+
+.space-l {
+    padding-top: $space;
+    padding-bottom: $space;
+    @media (min-width: $screen-sm-min) {
+        padding-top: $space-m;
+        padding-bottom: $space-m;
+    }
+    @media (min-width: $screen-md-min) {
+        padding-top: $space-l;
+        padding-bottom: $space-l;
+    }
+}
+
+.space-l-bottom {
+    padding-bottom: $space;
+    @media (min-width: $screen-sm-min) {
+        padding-bottom: $space-m;
+    }
+    @media (min-width: $screen-md-min) {
+        padding-bottom: $space-l;
+    }
+}
+
+.space-l-top {
+    margin-top: $space;
+    @media (min-width: $screen-sm-min) {
+        margin-top: $space-m;
+    }
+    @media (min-width: $screen-md-min) {
+        margin-top: $space-l;
+    }
+}
+
+.space-xl {
+    padding: $space-m 0;
+    @media (min-width: $screen-sm-min) {
+        padding: $space-xl-half 0;
+    }
+    @media (min-width: $screen-md-min) {
+        padding: $space-xl 0;
+    }
+}
+
+.space-xl-bottom {
+    padding-bottom: $space-l;
+    @media (min-width: $screen-md-min) {
+        padding-bottom: $space-xl;
+    }
+}

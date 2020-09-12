@@ -1,0 +1,25 @@
+.row.is-flex {
+    display: flex;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    @media(min-width: $screen-sm-min) {
+      flex-direction: row;
+    }
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+}
+.vertical-align-sm {
+    @media(min-width: $screen-sm-min) {
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,25 @@
+<article class="col-xs-6 col-md-4 col-lg-3 animate-repeat">
+  <div class="thumbnail" data-ng-class="moduleData.buyable ? 'active' : 'disabled'">
+    <a class="thumb-link" data-ng-href="{{::moduleData.url}}">
+      <img data-ng-src="{{::moduleData.images['sectionTopImage'].small}}"
+        data-ng-srcset="{{::moduleData.images['sectionTopImage'].small}} 1x, {{::moduleData.images['sectionTopImage'].medium}} 2x"
+        alt="{{::moduleData.image.alt}}">
+      <div class="caption">
+        <h3 class="product-name" data-ng-bind="::moduleData.title"></h3>
+        <h4 class="designer" data-ng-bind="::moduleData.designer.title"></h4>
+        <p class="flex-text">
+          <span class="price initial-price" data-ng-if="moduleData.buyable" data-ng-bind="moduleData.price | currency:'kr':2"></span>
+          <span class="price current-price" data-ng-bind="moduleData.priceIncCommission | currency:'kr':2"></span>
+        </p>
+        <div class="campaign-info">
+          <div class="campaign-countdown" data-ng-class="!moduleData.buyable ? 'countdown-start' : ''">
+            <svg class="icon icon-ios-clock-outline"><use xlink:href="#icon-ios-clock-outline"></use></svg>
+            <div class="countdown">
+              <span data-countdown data-date="{{moduleData.enddate}}" data-selected-period="{{moduleData.periode}}"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>

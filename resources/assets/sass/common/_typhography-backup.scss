@@ -1,0 +1,314 @@
+.p {
+  font-size: 12px;
+  line-height: 1.3;
+  @media(min-width: $screen-sm-min) {
+      font-size: 14px;
+      line-height: 1.4;
+  }
+  @media(min-width: $screen-md-min) {
+      font-size: 15px;
+      line-height: 1.4;
+  }
+}
+
+.comment-form input[type=email],
+.comment-form input[type=text],
+.comment-form input[type=url],
+.comment-form textarea,
+.form-control,
+.search-form .search-field,
+.vertical-text-header,
+blockquote .small,
+blockquote footer,
+blockquote small,
+body,
+dd,
+dt,
+li,
+p {
+    @extend .p;
+}
+
+p {
+    margin-top: 0;
+}
+
+.strong,
+p strong,
+sans-strong,
+strong {
+    font-family: $font-family-serif-strong;
+    font-weight: normal;
+    font-style: normal;
+}
+
+cite,
+em,
+p em {
+    font-family: $font-family-serif-em;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+// http://codepen.io/ericrasch/pen/Irlpm
+
+.manchet {
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+    span {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.8em;
+            border-top: 1px solid $gray-light;
+        }
+
+        &:before {
+            right: 100%;
+        }
+
+        &:after {
+            left: 100%;
+        }
+    }
+}
+// Headings
+// --------------------------------------------------
+
+h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 10px 0 0;
+    @media(min-width: $screen-md-min) {
+        font-size: 30px;
+    }
+    @media(min-width: $screen-lg-min) {
+        font-size: 46px;
+    }
+}
+
+h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 10px 0 20px;
+    @media(min-width: $screen-md-min) {
+        font-size: 26px;
+        margin: 10px 0 30px;
+    }
+    @media(min-width: $screen-lg-min) {
+        font-size: 40px;
+        line-height: 1.3;
+        margin: 10px 0 30px;
+        letter-spacing: 6px;
+    }
+}
+
+h2 small.manchet {
+    margin: 0;
+    padding: 0;
+    line-height: 2.2;
+}
+
+h2 small,
+h2.small {
+    display: block;
+    margin-top: 0 !important;
+    @extend h3;
+}
+
+h3 {
+    font-size: 9px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin: 10px 0;
+    font-weight: normal;
+    @media(min-width: $screen-sm-min) {
+        margin: 40px 0 10px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 1.4;
+    }
+}
+
+h3 small,
+h4 {
+    display: block;
+    font-size: 7px;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 10px 0;
+    @media(min-width: $screen-sm-min) {
+        margin: 10px 0 15px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 1.3;
+    }
+    @media(min-width: $screen-md-min) {
+        margin: 20px 0 10px;
+    }
+    @media(min-width: $screen-lg-min) {
+        margin: 40px 0 10px;
+    }
+}
+
+h1:first-of-type,
+h2:first-of-type {
+    margin-top: 0;
+}
+
+.small,
+p small {
+    font-size: 10px;
+    line-height: 1.2;
+    @media(min-width: $screen-sm-min) {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    @media(min-width: $screen-md-min) {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+// Lists
+// --------------------------------------------------
+
+dt,
+li {
+    margin: 5px 0 0;
+    line-height: 1.35;
+    @media(min-width: $screen-sm-min) {
+        margin: 5px 0 0;
+        line-height: 1.35;
+    }
+    @media(min-width: $screen-md-min) {
+        margin: 10px 0 0;
+        line-height: 1.35;
+    }
+    @media(min-width: $screen-lg-min) {
+        margin: 10px 0 0;
+        line-height: 1.4;
+    }
+}
+// Blockquote
+// --------------------------------------------------
+
+blockquote {
+    // text-transform: uppercase;
+    // h1::before,
+    // h2::before,
+    // p::before {
+    //     content: '\201C';
+    // }
+    //
+    // h1::after,
+    // h2::after,
+    // p::after {
+    //     content: '\201D';
+    // }
+    h1,
+    h2,
+    p {
+        margin: 0;
+    }
+    border-left: none;
+    padding: 0;
+}
+
+blockquote .small,
+blockquote footer,
+blockquote small {
+    color: $brand-tertiary;
+}
+// Lead
+// --------------------------------------------------
+
+.lead {
+    margin-bottom: $line-height-computed;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    @media(max-width: $screen-xs-min) {
+        font-size: 18px;
+    }
+    @media (min-width: $screen-sm-min) {
+        font-size: 20px;
+    }
+    @media (min-width: $screen-md-min) {
+        font-size: ($font-size-base * 1.5);
+    }
+}
+// Hightlight
+// based on https://css-tricks.com/multi-line-padded-text/
+// --------------------------------------------------
+// $highlight-padding: 0.5rem;
+// .black-underline,
+// .white-underline {
+//     display: inline;
+//     padding: $highlight-padding 0;
+//     box-decoration-break: clone;
+// }
+// .black-underline {
+//     background: $gray-darker;
+//     color: $white-darker;
+//     box-shadow: $highlight-padding 0 0 $gray-darker, -$highlight-padding 0 0 $gray-darker;
+// }
+// .white-underline {
+//     background: $white-darker;
+//     color: $gray-darker;
+//     box-shadow: $highlight-padding 0 0 $white-darker, -$highlight-padding 0 0 $white-darker;
+// }
+// Selection
+// --------------------------------------------------
+
+::selection {
+    background: $gray-base;
+    color: $white;
+}
+
+input::selection {
+    background: $white-darker;
+    color: $gray-darker;
+}
+// ul {
+//     list-style-position: inside;
+// }
+
+.hyphens-xs {
+    @media (max-width: $screen-xs-max) {
+        text-align: justify;
+        -moz-hyphens: auto;
+        -o-hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}
+
+.hyphens {
+    text-align: justify;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}

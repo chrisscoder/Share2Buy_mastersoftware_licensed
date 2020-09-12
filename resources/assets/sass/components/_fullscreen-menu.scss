@@ -1,0 +1,223 @@
+// .primary-nav {
+//     text-align: right;
+//     ul li {
+//         margin-right: -.5em;
+//     }
+// }
+// .secondary-nav {
+//     text-align: left;
+//     ul li {
+//         margin-left: -.5em;
+//     }
+// }
+// .fullscreen-nav-menu li .cart-count,
+// .fullscreen-nav-menu li .cart-price-total {
+//     font-size: 8px;
+// }
+// // ---- fullscreen nav styles
+// .noscroll {
+//     overflow: hidden;
+// }
+// .fullscreen-nav {
+//     font-family: $font-family-serif-strong;
+//     font-weight: 600;
+//     @media (min-width: $screen-sm-min) {
+//         display: none;
+//     }
+// }
+.fullscreen-nav-trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 18px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    backface-visibility: hidden;
+    perspective: 1000;
+    @media (min-width: $screen-sm-min) {
+        display: none;
+    }
+}
+.fullscreen-nav-trigger:focus {
+    outline: none;
+}
+.fullscreen-nav-trigger .menu-text {
+    display: inline-block;
+    position: absolute;
+    top: 52%;
+    right: 70px;
+    color: $main-primary;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    line-height: 0;
+}
+.fullscreen-nav-trigger .menu-icon {
+    /* this span is the central line of the menu icon */
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+    width: 18px;
+    height: 2px;
+    background-color: $main-primary;
+    transition: background-color 0.3s;
+    backface-visibility: hidden;
+    perspective: 1000;
+    /* these are the upper and lower lines in the menu icon */
+}
+.fullscreen-nav-trigger .menu-icon::before,
+.fullscreen-nav-trigger .menu-icon:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: $main-primary;
+    right: 0;
+    transition: transform 0.3s, top 0.3s, background-color 0s;
+    backface-visibility: hidden;
+    perspective: 1000;
+}
+.fullscreen-nav-trigger .menu-icon::before {
+    top: -5px;
+}
+.fullscreen-nav-trigger .menu-icon::after {
+    top: 5px;
+}
+.fullscreen-nav-trigger.open .menu-icon {
+    background-color: rgba(255, 255, 255, 0);
+}
+.fullscreen-nav-trigger.open .menu-icon::after,
+.fullscreen-nav-trigger.open .menu-icon::before {
+    background-color: white;
+}
+.fullscreen-nav-trigger.open .menu-icon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+.fullscreen-nav-trigger.open .menu-icon::after {
+    top: 0;
+    transform: rotate(225deg);
+}
+// .fullscreen-nav {
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     height: 100%;
+//     @include viewport-unit(height, 100vh);
+//     width: 100%;
+//     background: #111;
+//     z-index: 999;
+//     text-align: center;
+//     backface-visibility: hidden;
+//     perspective: 1000;
+//     overflow: hidden;
+//     visibility: hidden;
+//     transform: translate3d(0,-100%,0);
+//     transform-style: flat;
+//     transition: all 0.2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+// }
+// .fullscreen-nav-menu {
+//     overflow: auto; //clearfix
+//     zoom: 1; //clearfix
+//     position: relative;
+//     $y: 50%;
+//     top: $y;
+//     transform: translateY(-$y);
+//     .nav-brand {
+//         position: relative;
+//         $x: 50%;
+//         left: $x;
+//         transform: translateX(-$x);
+//         float: none;
+//         display: block;
+//     }
+// }
+// .fullscreen-nav-menu ul {
+//     margin-bottom: 0;
+// }
+// .fullscreen-nav-menu li {
+//     list-style: none;
+//     font-size: 16px;
+//     letter-spacing: 2px;
+//     margin: 0;
+//     text-transform: uppercase;
+//     line-height: 1;
+// }
+// @media(min-width: $screen-sm-min) {
+//     .fullscreen-nav li {
+//         font-size: 30px;
+//     }
+// }
+// @media(min-width: $screen-md-min) {
+//     .fullscreen-nav li {
+//         font-size: 46px;
+//     }
+// }
+// .fullscreen-nav a {
+//     display: inline-block;
+//     padding: 0.5em;
+//     width: 100%;
+//     color: $nav-color;
+//     transition: all 0.2s;
+//     text-decoration: none;
+// }
+// .fullscreen-nav a.active {
+//     color: $white;
+// }
+// .fullscreen-nav a:hover {
+//     color: $white;
+// }
+// // EFFECT
+// .fullscreen-nav.open {
+//     visibility: visible;
+//     transform: translate3d(0,0,0);
+//     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); //Fast Out, Slow In
+// }
+// .fullscreen-nav .nav-brand {
+//     visibility: hidden;
+//     opacity: 0;
+//     transform: translate3d(-50%,-100%,0);
+//     transition: opacity 0.2s ease-in-out 0.35s;
+// }
+// .fullscreen-nav.open .nav-brand {
+//     margin-bottom: $space-xs;
+//     visibility: visible;
+//     opacity: 1;
+//     transform: translate3d(-50%,0,0);
+//     transition: opacity 0.35s ease-in-out 0.25s,transform 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.25s; //Out · Back
+// }
+// .nav-brand.open {
+//     visibility: hidden;
+//     opacity: 0;
+//     transform: translate3d(0,-100%,0);
+//     transition: opacity 0.15s ease-in-out, transform 0.15s cubic-bezier(0.18, 0.89, 0.32, 1.28); //Out · Back;
+// }
+// .nav-brand {
+//     visibility: visible;
+//     opacity: 1;
+//     transform: translate3d(0,0,0);
+//     transition: opacity 0.35s ease-in-out 0.25s,transform 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.25s; //Out · Back
+// }
+// .fullscreen-nav h3,
+// .fullscreen-nav li {
+//     visibility: hidden;
+//     opacity: 0;
+//     transform: translate3d(0,-100%,0);
+//     transition: opacify 0.2s ease-in-out 0.35s, transition 0.2s ease;
+// }
+// .fullscreen-nav.open h3,
+// .fullscreen-nav.open li {
+//     visibility: visible;
+//     opacity: 1;
+//     transform: translate3d(0,0,0);
+//     $delay: 0.6s;
+//     transition: opacity 0.5s ease-out $delay, transform 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.28) $delay; //Out · Back
+// }

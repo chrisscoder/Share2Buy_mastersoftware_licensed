@@ -1,0 +1,43 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-american-express {
+  width: 3.125em;
+}
+
+.icon-lets-encrypt {
+  width: 1.2890625em;
+}
+
+.icon-mastercard {
+  width: 5.375em;
+}
+
+.icon-visa {
+  width: 3em;
+}
+
+.icon-powered_by_stripe {
+  width: 4.5771484375em;
+}
+
+.icon-modsvarlogo {
+  width: 10.7138671875em;
+}
+.icon-modsvar-triangle {
+  width: 0.96875em;
+}

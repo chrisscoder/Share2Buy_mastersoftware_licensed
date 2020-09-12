@@ -1,0 +1,77 @@
+// Global styling overwrite
+// --------------------------------------------------
+@import 'common/customvariables';
+@import 'common/variables';
+// NPM components
+// --------------------------------------------------
+// Core variables and mixins
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+// Reset and dependencies
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print';
+// Core CSS
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+// Components
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badges';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron'; //get rid of this
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pagination';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/alerts';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels'; //get rid of this
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed';
+// Utility classes
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
+
+// Global styling
+// --------------------------------------------------
+
+@import 'common/grid';
+@import 'common/col-xl';
+@import 'common/global';
+@import 'common/spacing';
+@import 'common/is-flex';
+@import 'common/no-gutters';
+@import 'common/ratio';
+@import 'common/animations';
+
+// Fonts and typography
+// --------------------------------------------------
+@import 'common/fonts';
+@import 'common/typhography';
+@import 'common/icons';
+
+// Components
+// --------------------------------------------------
+@import 'components/nav';
+@import 'components/shop-module';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/cookie-consent';
+@import 'components/loader';
+// @import 'components/responsive-video';
+@import 'components/img-filter';
+
+// Layouts
+// --------------------------------------------------
+@import 'layouts/main-layout';
+@import 'layouts/product';
+@import 'layouts/post';
+@import 'layouts/footer';
+// @import 'layouts/admin-dark-theme';
+@import 'layouts/login';
+@import 'layouts/checkout';
+
+// Backend
+// --------------------------------------------------
+@import 'layouts/admin';
+@import 'vendor/datepicker';
+@import 'vendor/selectize';

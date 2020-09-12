@@ -1,0 +1,218 @@
+// ---- Dark theme
+$admin-bg: #040404;
+
+.admin.dark-bg .admin-sidebar-nav {
+    background: $admin-bg;
+}
+
+.admin.dark-bg {
+    background: $admin-bg;
+    color: $gray-lighter;
+
+    a {
+        color: $white;
+    }
+    // font-size: 13px;
+}
+
+.admin.dark-theme select {
+    color: $gray-lighter;
+    border: 2px solid $gray-dark;
+    transition: all 0.2s;
+    background-color: $gray-dark;
+}
+
+.admin.dark-theme select:focus {
+    color: $gray-lighter;
+    border: 2px solid lighten($gray-dark, 10%);
+    background-color: lighten($gray-dark, 10%);
+}
+
+.admin.dark-theme select:hover {
+    color: $gray-lighter;
+    border: 2px solid lighten($gray-dark, 10%);
+    background-color: lighten($gray-dark, 10%);
+}
+
+.admin.dark-theme a.delete:hover {
+    color: $brand-danger;
+}
+
+.admin.dark-theme .heading {
+    color: $white-darker;
+}
+
+.admin.dark-theme a.logout {
+    color: $gray-dark;
+}
+
+.admin.dark-theme .panel-heading {
+    background-color: $gray-darker;
+    // color: $gray-lighter;
+}
+
+.admin.dark-theme .panel-heading .manchet {
+    line-height: 1.8;
+    margin: 0;
+}
+
+.admin.dark-theme .panel {
+    background-color: $gray-darker;
+}
+
+.admin.dark-theme .form-group label {
+    color: $gray-lightest;
+}
+
+.admin.dark-theme .manchet span {
+    // color: $white-darker;
+    color: $gray-light;
+}
+
+.admin.dark-theme ul li a {
+    display: block;
+}
+
+.admin.dark-bg tbody tr {
+    transition: all 0.2s;
+}
+// .admin.dark-bg tbody tr:hover {
+//     background: #1f1f1f;
+// }
+
+.admin.dark-theme .table {
+    font-size: 13px;
+}
+
+.admin.dark-theme .table > thead > tr > th {
+    border-color: $gray-light;
+}
+
+.admin.dark-theme .table > tbody > tr > td {
+    border-color: $gray-light;
+}
+
+.admin.dark-theme thead {
+    // color: $gray-lighter;
+}
+
+.admin.dark-theme tbody {
+    // color: $gray-lighter;
+}
+
+.admin.dark-theme .input-group-addon {
+    color: $gray-lighter;
+    background-color: #262626;
+    border: none;
+    border-left: 1px solid #1a1a1a;
+    padding: 0;
+    min-width: 46px;
+}
+
+.admin.dark-theme .form-control {
+    color: $gray-lighter;
+    border: 2px solid $gray-dark;
+    background-color: $gray-dark;
+    transition: all 0.2s;
+    height: 46px;
+    @media(min-width: $screen-sm-min) {
+        height: 49px;
+    }
+    @media(min-width: $screen-md-min) {
+        height: 52px;
+    }
+    @media(min-width: $screen-lg-min) {
+        height: 58px;
+    }
+}
+
+.admin.dark-theme textarea.form-control {
+    height: initial;
+}
+
+.admin.dark-theme .form-control:focus {
+    border-color: lighten($gray-dark, 10%);
+    background-color: lighten($gray-dark, 10%);
+}
+
+.admin.dark-theme .help-block {
+    color: #666;
+}
+
+.admin.dark-theme .btn-default {
+    // color: $gray-lightest;
+    // border-color: $gray-lightest;
+    color: #dadada;
+    background: #000;
+    border-color: #000;
+}
+
+.admin a.btn.btn-sm.btn-default,
+.admin input.btn.btn-sm.btn-default {
+    font-size: 12px;
+    padding: 14px;
+    line-height: 1;
+}
+
+.admin.dark-theme .btn-default:focus,
+.admin.dark-theme .btn-default:hover,
+.inputfile:focus + .btn-file {
+    color: $brand-primary;
+    background: $gray-lightest;
+}
+
+.admin.dark-theme .main-panel {
+    border-right: 1px solid #000;
+}
+
+.admin.dark-theme .alert {
+    border: none;
+}
+
+.admin.dark-theme input[type="checkbox"] {
+    margin-bottom: $space;
+}
+
+.admin.dark-theme .form-group label.text-success,
+.admin.dark-theme .help-block.text-success,
+.admin.dark-theme .input-group-addon.text-success {
+    color: $brand-success-lighter;
+}
+
+.admin.dark-theme .form-group label.text-warning,
+.admin.dark-theme .help-block.text-warning,
+.admin.dark-theme .input-group-addon.text-warning {
+    color: $brand-warning;
+}
+
+.admin.dark-theme .form-group label.text-danger,
+.admin.dark-theme .help-block.text-danger,
+.admin.dark-theme .input-group-addon.text-danger {
+    color: $brand-danger;
+}
+
+.admin.dark-theme .help-block .icon {
+    margin-right: 5px;
+}
+$placeholder-color: $gray-light;
+
+.admin.dark-theme::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $placeholder-color;
+}
+
+.admin.dark-theme::-moz-placeholder {
+    /* Firefox 19+ */
+    opacity: 1;
+    color: $placeholder-color;
+}
+
+.admin.dark-theme:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $placeholder-color;
+}
+
+.admin.dark-theme:-moz-placeholder {
+    /* Firefox 18- */
+    color: $placeholder-color;
+}

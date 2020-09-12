@@ -1,0 +1,21 @@
+// font path
+@font-face {
+    font-family: 'BrandonGrotesqueWeb-Black';
+    src: url('#{$font-path}/308F61_0_0.eot');
+    src: url('#{$font-path}/308F61_0_0.eot?#iefix') format('embedded-opentype'),url('#{$font-path}/308F61_0_0.woff2') format('woff2'),url('#{$font-path}/308F61_0_0.woff') format('woff'),url('#{$font-path}/308F61_0_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BrandonTextWeb-Bold';
+    src: url('#{$font-path}/308F61_1_0.eot');
+    src: url('#{$font-path}/308F61_1_0.eot?#iefix') format('embedded-opentype'),url('#{$font-path}/308F61_1_0.woff2') format('woff2'),url('#{$font-path}/308F61_1_0.woff') format('woff'),url('#{$font-path}/308F61_1_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BrandonTextWeb-Italic';
+    src: url('#{$font-path}/308F61_2_0.eot');
+    src: url('#{$font-path}/308F61_2_0.eot?#iefix') format('embedded-opentype'),url('#{$font-path}/308F61_2_0.woff2') format('woff2'),url('#{$font-path}/308F61_2_0.woff') format('woff'),url('#{$font-path}/308F61_2_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BrandonTextWeb-Regular';
+    src: url('#{$font-path}/308F61_3_0.eot');
+    src: url('#{$font-path}/308F61_3_0.eot?#iefix') format('embedded-opentype'),url('#{$font-path}/308F61_3_0.woff2') format('woff2'),url('#{$font-path}/308F61_3_0.woff') format('woff'),url('#{$font-path}/308F61_3_0.ttf') format('truetype');
+}

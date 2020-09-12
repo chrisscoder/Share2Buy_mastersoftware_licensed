@@ -1,0 +1,32 @@
+.tint {
+    position: relative;
+
+    img {
+        filter: grayscale(1);
+    }
+}
+
+.tint::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mix-blend-mode: lighten; // not supported in IE and Edge
+    background: $brand-blue;
+    opacity: 0.50;
+    transition: all 0.2s linear;
+    z-index: 1;
+}
+
+.mix-blend-mode-no .tint::before {
+    // non js method https://teamtreehouse.com/community/fallback-for-css-blending-modes
+    opacity: 0 !important;
+    background: none;
+    mix-blend-mode: unset;
+}
+img.bw {
+    filter: grayscale(1);
+}
